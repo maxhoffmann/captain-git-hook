@@ -23,8 +23,7 @@ module.exports = function() {
 
 function installHook(hook) {
   try {
-    fs.writeFileSync(path.join(hookDir, hook), template);
-    fs.chmodSync(path.join(hookDir, hook), '755');
+    fs.writeFileSync(path.join(hookDir, hook), template, { mode: '755' });
   } catch(error) {
     console.error('installing '+hook+' failed: ', error);
   }

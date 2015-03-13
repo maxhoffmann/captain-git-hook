@@ -1,10 +1,10 @@
 {
   "name": "captain-git-hook",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "define git hooks in your package.json",
   "main": "index.js",
   "scripts": {
-    "install": "./bin/install"
+    "install": "node ./"
   },
   "keywords": [
     "git",
