@@ -1,10 +1,11 @@
 {
   "name": "captain-git-hook",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "define git hooks in your package.json",
   "main": "index.js",
   "scripts": {
-    "install": "node ./"
+    "postinstall": "node ./",
+    "test": "NODE_ENV=testing tape test/"
   },
   "keywords": [
     "git",
@@ -16,6 +17,7 @@
   "author": "Maximilian Hoffmann",
   "license": "MIT",
   "devDependencies": {
+    "fs-extra": "^0.16.5",
     "tap-dot": "^1.0.0",
     "tape": "^3.5.0"
   }
