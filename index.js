@@ -3,19 +3,28 @@ var fs = require('fs');
 var path = require('path');
 var template = fs.readFileSync('./hook-template', 'utf-8');
 
+var projectDir = path.resolve(process.cwd(), '..', '..');
+var hookDir = path.resolve(projectDir, '.git/hooks/');
+
+var hooks = [
+  'pre-commit',
+  'post-commit',
+  'pre-push',
+  'post-checkout',
+  'pre-receive',
+  'post-receive'
+];
+
 module.exports = function() {
-  installHook('pre-commit');
-  installHook('post-commit');
-  installHook('pre-push');
-  installHook('post-checkout');
-  installHook('pre-receive');
-  installHook('post-receive');
+  hooks.forEach(function(hook) {
+    installHook(hook);
+  });
 };
 
 function installHook(hook) {
   try {
-    fs.writeFileSync(path.resolve(process.cwd(), '.git/hooks/'+hook), template);
-    fs.chmodSync(path.resolve(process.cwd(), '.git/hooks/'+hook), '755');
+    fs.writeFileSync(path.join(hookDir, hook), template);
+    fs.chmodSync(path.join(hookDir, hook), '755');
   } catch(error) {
     console.error('installing '+hook+' failed: ', error);
   }
