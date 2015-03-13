@@ -2,8 +2,12 @@
 "use strict";
 var path = require('path');
 var execSync = require('child_process').execSync;
-var config = require('../../package');
 var hook = path.basename(__filename);
+var config = require(path.resolve(process.cwd(), 'package'));
+
+if (!config.scripts[hook]) {
+  process.exit(0);
+}
 
 try {
   var output = execSync(config.scripts[hook], { encoding: 'utf-8' });
