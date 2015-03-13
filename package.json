@@ -1,0 +1,26 @@
+{
+  "name": "package-git-hooks",
+  "version": "1.0.0",
+  "description": "define git hooks in your package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/index.js | tap-dot"
+  },
+  "keywords": [
+    "git",
+    "hooks",
+    "hook",
+    "package.json",
+    "package"
+  ],
+  "author": "Maximilian Hoffmann",
+  "license": "MIT",
+  "devDependencies": {
+    "tap-dot": "^1.0.0",
+    "tape": "^3.5.0"
+  },
+  "scripts": {
+    "install": "./bin/hook",
+    "pre-commit": "test"
+  }
+}
