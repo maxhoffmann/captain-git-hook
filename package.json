@@ -1,10 +1,10 @@
 {
   "name": "captain-git-hook",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "define git hooks in your package.json",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/index.js | tap-dot"
+    "install": "./bin/install"
   },
   "keywords": [
     "git",
@@ -18,8 +18,5 @@
   "devDependencies": {
     "tap-dot": "^1.0.0",
     "tape": "^3.5.0"
-  },
-  "scripts": {
-    "install": "./bin/install"
   }
 }

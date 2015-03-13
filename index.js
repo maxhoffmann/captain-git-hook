@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path');
 var template = fs.readFileSync('./hook-template', 'utf-8');
 
-var projectDir = path.resolve(process.cwd(), '..', '..');
+var projectDir = path.resolve(__dirname, '..', '..');
 var hookDir = path.resolve(projectDir, '.git/hooks/');
 
 var hooks = [
