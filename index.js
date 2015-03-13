@@ -12,8 +12,7 @@ var hookDir = path.resolve(projectDir, '.git/hooks/');
 var hooks = [
   'pre-commit',
   'post-commit',
-  'pre-push',
-  'post-checkout'
+  'pre-push'
 ];
 
 module.exports = function() {

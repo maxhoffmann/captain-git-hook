@@ -23,7 +23,6 @@ Currently supported hooks:
 pre-commit
 post-commit
 pre-push
-post-checkout
 ```
 
 Installation
