@@ -1,4 +1,4 @@
-captain-git-hook
+captain-git-hook [![version][1]][2] [![build][3]][4]
 ================
 
 define git hooks in your package.json
@@ -41,3 +41,8 @@ LICENSE
 -------
 
 The MIT License (MIT) Maximilian Hoffmann
+
+[1]: http://img.shields.io/npm/v/captain-git-hook.svg?style=flat
+[2]: https://www.npmjs.org/package/captain-git-hook
+[3]: http://img.shields.io/travis/maxhoffmann/captain-git-hook.svg?style=flat
+[4]: https://travis-ci.org/maxhoffmann/captain-git-hook
