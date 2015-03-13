@@ -24,10 +24,6 @@ pre-commit
 post-commit
 pre-push
 post-checkout
-
-# server
-pre-receive
-post-receive
 ```
 
 Installation

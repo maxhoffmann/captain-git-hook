@@ -1,11 +1,11 @@
 {
   "name": "captain-git-hook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "define git hooks in your package.json",
   "main": "index.js",
   "scripts": {
     "postinstall": "node ./",
-    "test": "NODE_ENV=testing tape test/"
+    "test": "NODE_ENV=testing tape test/ | tap-dot"
   },
   "keywords": [
     "git",

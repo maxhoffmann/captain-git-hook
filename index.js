@@ -13,9 +13,7 @@ var hooks = [
   'pre-commit',
   'post-commit',
   'pre-push',
-  'post-checkout',
-  'pre-receive',
-  'post-receive'
+  'post-checkout'
 ];
 
 module.exports = function() {
