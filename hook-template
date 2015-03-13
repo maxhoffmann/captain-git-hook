@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+"use strict";
+var path = require('path');
+var execSync = require('child_process').execSync;
+var config = require('../../package');
+var hook = path.basename(__filename);
+
+try {
+  var output = execSync(config.scripts[hook], { encoding: 'utf-8' });
+  console.log(output);
+} catch(error) {
+  console.log(error.stdout);
+  console.error(error.stderr);
+  process.exit(error.status);
+}

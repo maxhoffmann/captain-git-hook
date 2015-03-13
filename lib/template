@@ -1,4 +1,0 @@
-#!/usr/bin/env node
-
-console.log('hook');
-console.log('arguments ', process.argv.slice(2));
