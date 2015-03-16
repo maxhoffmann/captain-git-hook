@@ -22,6 +22,7 @@ hooks.forEach(function(hook) {
 function installHook(hook) {
   try {
     fs.writeFileSync(path.join(hookDir, hook), template, { mode: '755' });
+    console.log('installed '+path.join(hookDir, hook));
   } catch(error) {
     console.error('installing '+hook+' failed: ', error);
   }
