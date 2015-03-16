@@ -2,7 +2,6 @@
 var fs = require('fs-extra');
 var path = require('path');
 var test = require('tape');
-var install = require('../');
 
 test('creates hooks', function(is) {
   is.plan(2);
@@ -10,7 +9,7 @@ test('creates hooks', function(is) {
   fs.removeSync('test/.git');
   fs.ensureDirSync('test/.git/hooks');
 
-  install();
+  require('../');
 
   var hooks = fs.readdirSync('test/.git/hooks');
   var stat = fs.statSync(path.join(__dirname, '.git/hooks', hooks[0]));

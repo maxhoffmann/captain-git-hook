@@ -15,11 +15,9 @@ var hooks = [
   'pre-push'
 ];
 
-module.exports = function() {
-  hooks.forEach(function(hook) {
-    installHook(hook);
-  });
-};
+hooks.forEach(function(hook) {
+  installHook(hook);
+});
 
 function installHook(hook) {
   try {
