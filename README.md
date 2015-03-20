@@ -1,7 +1,7 @@
 captain-git-hook [![version][1]][2] [![build][3]][4]
 ================
 
-define git hooks in your package.json
+define git hooks in your package.json (requires node `>= 0.12`)
 
 Usage
 -----
