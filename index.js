@@ -12,6 +12,7 @@ var hookDir = path.resolve(projectDir, '.git/hooks/');
 var hooks = [
   'pre-commit',
   'post-commit',
+  'post-merge',
   'pre-push'
 ];
 
