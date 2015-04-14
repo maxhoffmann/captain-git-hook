@@ -22,6 +22,7 @@ Currently supported hooks:
 ```bash
 pre-commit
 post-commit
+post-merge
 pre-push
 ```
 
