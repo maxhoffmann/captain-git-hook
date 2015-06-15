@@ -10,8 +10,13 @@ __package.json__
 ```json
 {
   "scripts": {
-    "pre-commit": "echo 'this prevents commiting' && exit 1"
-  }
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "lint": "jshint ."
+    },
+    "pre-commit": [
+      "lint",
+      "test"
+    ]
 }
 ```
 
