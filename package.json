@@ -1,14 +1,14 @@
 {
   "name": "captain-git-hook",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "description": "define git hooks as scripts in your package.json",
+  "main": "index.js",
   "engines": {
     "node": ">=0.12"
   },
   "engineStrict": true,
   "scripts": {
-    "postinstall": "node ./src/install",
-    "pre-commit": "npm run -s test",
+    "postinstall": "node ./",
     "test": "NODE_ENV=testing tape test/ | tap-dot"
   },
   "repository": {
@@ -25,6 +25,7 @@
   "author": "Maximilian Hoffmann",
   "license": "MIT",
   "devDependencies": {
+    "fs-extra": "^0.16.5",
     "tap-dot": "^1.0.0",
     "tape": "^3.5.0"
   }
