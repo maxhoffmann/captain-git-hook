@@ -8,14 +8,14 @@ var hookName = path.basename(__filename);
 var config = require(path.resolve(process.cwd(), 'package'));
 
 if (!config.scripts[hookName]) {
-    process.exit(0);
+  process.exit(0);
 }
 
 
 var npmrun = spawn('npm', ['-s', 'run', hookName], {
-    stdio: 'inherit'
+  stdio: 'inherit'
 });
 
 npmrun.on('close', function(code) {
-    process.exit(code);
+  process.exit(code);
 });
