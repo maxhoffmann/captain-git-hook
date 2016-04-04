@@ -1,6 +1,6 @@
 {
   "name": "captain-git-hook",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "define git hooks as scripts in your package.json",
   "main": "index.js",
   "engines": {
