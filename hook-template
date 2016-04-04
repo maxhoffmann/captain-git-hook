@@ -13,7 +13,7 @@ try {
   var output = execSync(config.scripts[hook], { encoding: 'utf-8' });
   console.log(output);
 } catch(error) {
-  console.log(error.stdout);
+  console.error(error.stdout);
   console.error(error.stderr);
   process.exit(error.status);
 }
