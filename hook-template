@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 "use strict";
-var path = require('path');
-var execSync = require('child_process').execSync;
+var path = require("path");
+var execSync = require("child_process").execSync;
 var hook = path.basename(__filename);
-var config = require(path.resolve(process.cwd(), 'package'));
+var config = require(path.resolve(process.cwd(), "package.json"));
 
 if (!config.scripts[hook]) {
   process.exit(0);
 }
 
 try {
-  var output = execSync(config.scripts[hook], { encoding: 'utf-8' });
-  console.log(output);
-} catch(error) {
-  console.error(error.stdout);
-  console.error(error.stderr);
+  execSync(config.scripts[hook], {
+    encoding: "utf-8",
+    stdio: "inherit"
+  });
+} catch (error) {
   process.exit(error.status);
 }
