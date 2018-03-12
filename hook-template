@@ -3,7 +3,7 @@
 var path = require("path");
 var execSync = require("child_process").execSync;
 var hook = path.basename(__filename);
-var config = require(path.resolve(process.cwd(), "package"));
+var config = require(path.resolve(process.cwd(), "package.json"));
 
 if (!config.scripts[hook]) {
   process.exit(0);
